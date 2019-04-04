@@ -1,0 +1,20 @@
+<h1>HI</h1>
+
+<form action="/artists_instruments" method="POST">
+  <select name="artist_id">
+    <%@artists.each do |artist| %>
+    <option value="<%= artist.id %>">
+      <%= artist.name %>
+    </option>
+    <% end %>
+</select>
+
+  <select name="instrument_id">
+    <%@instruments.each do |instrument| %>
+    <option value="<%= instrument.id %>">
+      <%= instrument.name %>
+      </option>
+    <% end %>
+  </select>
+  <input type="submit" value="Submit" />
+</form>
